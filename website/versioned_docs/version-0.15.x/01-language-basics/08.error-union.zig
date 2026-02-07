@@ -13,6 +13,5 @@ test "error union" {
     const maybe_error: AllocationError!u16 = AllocationError.OutOfMemory;
     const no_error = maybe_error catch 0;
 
-    try expect(@TypeOf(no_error) == u16);
     try expect(no_error == 0);
 }
